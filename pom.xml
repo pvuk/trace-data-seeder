@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.5.3</version>
+		<!--lookup parent from repository -->
+		<relativePath/>
+	</parent>
+	<groupId>com.nl.trace.dataseeder</groupId>
+	<artifactId>trace-data-seeder</artifactId>
+	<version>0.1.1-SNAPSHOT</version>
+	<name>trace-data-seeder</name>
+	<description>
+		Data Seeder (Insert Default Data) System project for Spring Boot.
+		This project depends on trace-bank, trace-cards
+	</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>21</java.version>
+	</properties>
+	<dependencies>
+		<!--default login page: http://localhost:8080/login > username: user, password: genered password appear in console-->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+<!--		Avoid mixing WebFlux and WebMVC unless necessary. You have both:-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-webflux</artifactId>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+<!--			<scope>runtime</scope>-->
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.opencsv</groupId>
+		    <artifactId>opencsv</artifactId>
+		    <version>5.11.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+	    <!-- Apache POI for reading Excel files -->
+	    <dependency>
+	        <groupId>org.apache.poi</groupId>
+	        <artifactId>poi</artifactId>
+	        <version>5.4.1</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.poi</groupId>
+	        <artifactId>poi-ooxml</artifactId>
+	        <version>5.4.1</version>
+	    </dependency>
+		
+		<!--This allows the child project to inherit dependencies, plugins, and configurations from the parent.-->
+<!--		<dependency>-->
+<!--			<groupId>com.nl.trace.cards</groupId>-->
+<!--			<artifactId>trace-cards</artifactId>-->
+<!--			<version>0.1.1-SNAPSHOT</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.nl.trace.bank</groupId>-->
+<!--			<artifactId>trace-bank</artifactId>-->
+<!--			<version>0.1.1-SNAPSHOT</version>-->
+<!--		</dependency>-->
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
