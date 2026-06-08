@@ -30,4 +30,8 @@ public class Constants {
 	public interface PORT {
 		public static final String H2_TCP_PORT = "9010";
 	}
+	
+	public interface FILE {
+		public static final String UPLOADS = "/uploads";
+	}
 }
